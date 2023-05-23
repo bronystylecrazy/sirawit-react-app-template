@@ -46,11 +46,7 @@ export function extract<T, K extends keyof T>(
 }
 
 export function delay(ms: number) {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      res(true);
-    }, ms);
-  });
+  return new Promise((res) => setTimeout(res, ms));
 }
 
 export async function getImageData(file: File): Promise<{
