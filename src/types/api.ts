@@ -4,7 +4,7 @@ export interface Response<TData = any> {
 }
 
 export interface Data {
-  now_playing: NowPlaying;
+  now_playing: Music;
   list: Music[];
   control: Control;
 }
@@ -21,15 +21,9 @@ export interface Music {
   title: string;
   artist: string;
   queue_by: string;
-  queue_at: Date;
+  queue_at: string;
   is_playing: boolean;
   is_owned: boolean;
-}
-
-export interface NowPlaying {
-  artwork_url: string;
-  title: string;
-  artist: string;
 }
 
 export type MusicStateResponse = Response<Data>;
